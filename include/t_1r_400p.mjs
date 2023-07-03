@@ -1,4 +1,4 @@
-import * as sim from '../utility.mjs'
+import * as sim from '../sim.mjs'
 
 export let enabled = true
 export let name = 'trade 1r, 400p targets'
