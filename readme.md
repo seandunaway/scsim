@@ -75,7 +75,7 @@ range {
   },
   diff_days: 4547.603472222222
 }
-trade 1r, 100p targets, every 5p {
+trade 1r, 100p targets {
   up: 2885,
   down: 2247,
   resolved: 5132,
@@ -83,7 +83,7 @@ trade 1r, 100p targets, every 5p {
   total_trades: 5149,
   percent: 0.5621590023382697
 }
-trade 1r, 200p targets, every 5p {
+trade 1r, 200p targets {
   up: 1675,
   down: 1061,
   resolved: 2736,
@@ -91,7 +91,7 @@ trade 1r, 200p targets, every 5p {
   total_trades: 2771,
   percent: 0.6122076023391813
 }
-trade 1r, 400p targets, every 5p {
+trade 1r, 400p targets {
   up: 1050,
   down: 463,
   resolved: 1513,
@@ -99,7 +99,7 @@ trade 1r, 400p targets, every 5p {
   total_trades: 1588,
   percent: 0.6939854593522803
 }
-trade 1r, 50p targets, every 5p {
+trade 1r, 50p targets {
   up: 4702,
   down: 4128,
   resolved: 8830,
@@ -107,7 +107,7 @@ trade 1r, 50p targets, every 5p {
   total_trades: 8838,
   percent: 0.5325028312570781
 }
-trade 1r, 5p targets, every 5p {
+trade 1r, 5p targets {
   up: 19369,
   down: 18507,
   resolved: 37876,
@@ -115,7 +115,7 @@ trade 1r, 5p targets, every 5p {
   total_trades: 37876,
   percent: 0.5113792375118809
 }
-time 94219
+time 59783
 %
 ```
 
