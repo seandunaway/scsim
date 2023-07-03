@@ -1,15 +1,15 @@
-import * as util from '../util.mjs'
+import * as trade from '../trade.mjs'
 
 export let enabled = true
 export let name = 'trade 1r, 200p targets'
 
-let state = util.new_state()
+let state = trade.new_state()
 
 export function pre() {
 }
 
 export function tick(object) {
-    util.trade_targets(state, object, 200, 200)
+    trade.trade_targets(state, object, 200, 200)
 
     // enter
     if (object.c % 5 !== 0) return  // every 5p
@@ -21,5 +21,5 @@ export function debug() {
 }
 
 export function post() {
-    return util.trade_summary(state)
+    return trade.trade_summary(state)
 }
