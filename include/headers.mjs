@@ -1,4 +1,4 @@
-export let enabled = false
+export let enabled = true
 export let name = 'headers'
 
 let headers = {
