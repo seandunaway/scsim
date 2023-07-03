@@ -1,15 +1,15 @@
-import * as sim from '../sim.mjs'
+import * as util from '../util.mjs'
 
 export let enabled = true
 export let name = 'trade 1r, 200p targets'
 
-let state = sim.new_state()
+let state = util.new_state()
 
 export function pre() {
 }
 
 export function tick(object) {
-    sim.trade_targets(state, object, 200, 200)
+    util.trade_targets(state, object, 200, 200)
 
     // enter
     if (object.c % 5 !== 0) return  // every 5p
@@ -21,5 +21,5 @@ export function debug() {
 }
 
 export function post() {
-    return sim.trade_summary(state)
+    return util.trade_summary(state)
 }
