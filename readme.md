@@ -95,3 +95,8 @@ time 81360
 %
 ```
 
+
+## todo
+- boolean functions for filter, enter, exit
+- multiprocessor
+- add strategies
