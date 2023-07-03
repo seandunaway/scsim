@@ -16,7 +16,7 @@ export function pre() {
     return headers
 }
 
-export function tick(object) {
+export function tick() {
 }
 
 export function debug() {
