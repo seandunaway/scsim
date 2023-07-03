@@ -44,6 +44,7 @@ async function *hijack(source) {
                 console.error(`line ${lines_processed}: ${error.message}`)
                 continue
             }
+
             handle('tick', object)
 
             if (process.env.DEBUG) handle('debug', object)
