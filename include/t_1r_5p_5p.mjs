@@ -3,8 +3,8 @@ export let name = 'trade 1r, 5p targets, every 5p'
 
 let trades = []
 
-let up_target = 1
-let down_target = 1
+let up_target = 5
+let down_target = 5
 
 let up = 0
 let down = 0
