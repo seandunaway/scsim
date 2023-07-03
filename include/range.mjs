@@ -18,7 +18,7 @@ export function debug() {
 }
 
 export function post() {
-    low.datetime = new Date(low.t)
-    high.datetime = new Date(high.t)
-    return {low, high}
+    let low_datetime = new Date(low.t)
+    let high_datetime = new Date(high.t)
+    return {low_datetime, low, high_datetime, high}
 }
