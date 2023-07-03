@@ -83,6 +83,14 @@ trade 1r, 100p targets {
   total_trades: 5149,
   percent: 0.5621590023382697
 }
+trade 1r, 100p targets, 2020-2023 only {
+  up: 1800,
+  down: 1627,
+  resolved: 3427,
+  unresolved: 0,
+  total_trades: 3427,
+  percent: 0.5252407353370294
+}
 trade 1r, 200p targets {
   up: 1675,
   down: 1061,
@@ -115,7 +123,7 @@ trade 1r, 5p targets {
   total_trades: 37876,
   percent: 0.5113792375118809
 }
-time 59783
+time 61736
 %
 ```
 

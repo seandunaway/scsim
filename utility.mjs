@@ -12,30 +12,15 @@ export function new_state(overrides) {
     return state
 }
 
-export function new_rules(overrides) {
-    let rules = {
-        up_target: undefined,
-        down_target: undefined,
-        start_timestamp: undefined,
-        stop_timestamp: undefined,
-        max_duration: undefined,
-        bid_volume: undefined,
-        ask_volume: undefined,
-        flat_eod: false,
-        ...overrides,
-    }
-    return rules
-}
-
-export function trade_check(state, rules, object) {
+export function trade_targets(state, object, up_target = 5, down_target = 5) {
     for (let i = 0; i < state.trades.length; i++) {
         if (state.trades[i] === undefined) continue
 
-        if (state.trades[i] + rules.up_target <= object.c) {
+        if (state.trades[i] + up_target <= object.c) {
             state.up++
             state.trades[i] = undefined
         }
-        else if (state.trades[i] - rules.down_target >= object.c) {
+        else if (state.trades[i] - down_target >= object.c) {
             state.down++
             state.trades[i] = undefined
         }

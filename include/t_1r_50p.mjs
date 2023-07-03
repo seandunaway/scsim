@@ -4,16 +4,12 @@ export let enabled = true
 export let name = 'trade 1r, 50p targets'
 
 let state = sim.new_state()
-let rules = sim.new_rules({
-    up_target: 50,
-    down_target: 50,
-})
 
 export function pre() {
 }
 
 export function tick(object) {
-    sim.trade_check(state, rules, object)
+    sim.trade_targets(state, object, 50, 50)
 
     // enter
     if (object.c % 5 !== 0) return  // every 5p
