@@ -18,10 +18,10 @@ export let name = 'name'
 export function pre() {
 }
 
-export function tick() {
+export function tick(object) {
 }
 
-export function debug() {
+export function debug(object) {
 }
 
 export function post() {
