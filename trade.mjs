@@ -1,12 +1,11 @@
 export function state(overrides) {
     let state = {
-        up_target: 10,
-        down_target: 10,
-
         trades: [],
         up: 0,
         down: 0,
 
+        up_target: 10,
+        down_target: 10,
         ...overrides,
     }
     return state
