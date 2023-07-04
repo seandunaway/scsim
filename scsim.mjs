@@ -57,6 +57,8 @@ async function *hijack(source) {
             if (object.t < timestamp_start || object.t > timestamp_stop) continue
 
             handle('tick', object)
+            handle('enter', object)
+            handle('exit', object)
         }
     }
 

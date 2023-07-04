@@ -4,8 +4,8 @@ export function state(overrides) {
         up: 0,
         down: 0,
 
-        up_target: 10,
-        down_target: 10,
+        up_target: Number(process.argv[5]) || 10,
+        down_target: Number(process.argv[6]) || 10,
         ...overrides,
     }
     return state
