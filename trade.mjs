@@ -22,12 +22,11 @@ export function targets(state, object, up_target = 5, down_target = 5) {
 }
 
 export function summary(state) {
-    state.resolved = state.up + state.down
-    state.unresolved = state.trades.length
-    state.total_trades = state.resolved + state.unresolved
-    state.percent = state.up / state.resolved
-
     let summary = {...state}
+    summary.resolved = summary.up + summary.down
+    summary.unresolved = summary.trades.length
+    summary.total_trades = summary.resolved + summary.unresolved
+    summary.percent = summary.up / summary.resolved
     delete summary.trades
     return summary
 }
