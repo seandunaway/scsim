@@ -54,7 +54,7 @@ async function *hijack(source) {
 
 function handle(hook, ...params) {
     for (let handler of handlers) {
-        if (typeof handler[hook] !== 'function') return
+        if (typeof handler[hook] !== 'function') continue
 
         let result = handler[hook](...params)
 
