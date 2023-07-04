@@ -3,12 +3,15 @@
 import {readdirSync} from 'node:fs'
 import {pipeline} from 'node:stream'
 
+let handler_regex = new RegExp(process.argv[2])
+let timestamp_start = new Date(process.argv[3] ?? '1900').getTime()
+let timestamp_stop = new Date(process.argv[4] ?? '2100').getTime()
+
 let handlers = []
 let filenames = readdirSync('./include/')
 let filenames_sort = filenames.sort(function (a, b) {
     return a.localeCompare(b, undefined, {numeric: true})
 })
-let handler_regex = new RegExp(process.argv[2])
 for (let filename of filenames_sort) {
     if (! filename.endsWith('.mjs')) continue
     let module = await import(`./include/${filename}`)
@@ -50,6 +53,8 @@ async function *hijack(source) {
                 console.error(`line ${lines_processed}: ${error.message}`)
                 continue
             }
+
+            if (object.t < timestamp_start || object.t > timestamp_stop) continue
 
             handle('tick', object)
         }

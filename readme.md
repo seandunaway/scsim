@@ -3,7 +3,11 @@
 > iterate over historical data and pass each tick to handlers
 
 
-usage: `./scsim.mjs < ES.test.jsonl`
+usage: `./scsim.mjs <regex> <start_date> <stop_date> < ES.test.jsonl`
+
+regex: handler match e.g. `'(count|t_1r)'`, omit for all
+
+start_date, stop_date: any valid datetime string e.g. `'March 5 2020 6:30'`, omit for all
 
 stdin: [sierrachart line separated json](http://github.com/seandunaway/scsv2sjsonl)
 
