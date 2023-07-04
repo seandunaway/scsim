@@ -60,5 +60,8 @@ function enter_long(object) {
 }
 
 export function post() {
-    return trade.trade_summary(state)
+    let summary = {...trade.trade_summary(state)}
+    summary.breakeven = 1 - (target / (target + stop * martingale_max))
+    summary.edge = summary.percent - summary.breakeven
+    return summary
 }
