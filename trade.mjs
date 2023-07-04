@@ -17,7 +17,7 @@ export function trade_targets(state, object, up_target = 5, down_target = 5) {
             state.resolved++
             state.trades.splice(i, 1)
         }
-        else if (state.trades[i] - down_target >= object.c) {
+        if (state.trades[i] - down_target >= object.c) {
             state.down++
             state.resolved++
             state.trades.splice(i, 1)
