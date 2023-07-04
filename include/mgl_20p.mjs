@@ -3,7 +3,7 @@ import * as trade from '../trade.mjs'
 export let enabled = true
 export let name = 'martingale long, 1r 20p lmt 5'
 
-let state = trade.new_state()
+let state = trade.state()
 
 let target = 20
 let stop = 20
@@ -60,7 +60,7 @@ function enter_long(object) {
 }
 
 export function post() {
-    let summary = {...trade.trade_summary(state)}
+    let summary = {...trade.summary(state)}
     summary.breakeven = 1 - (target / (target + stop * martingale_max))
     summary.edge = summary.percent - summary.breakeven
     return summary

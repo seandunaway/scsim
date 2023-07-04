@@ -3,7 +3,7 @@ import * as trade from '../trade.mjs'
 export let enabled = true
 export let name = 'martingale short, 1r 5p lmt 5'
 
-let state = trade.new_state()
+let state = trade.state()
 
 let target = 5
 let stop = 5
@@ -60,5 +60,5 @@ function enter_long(object) {
 }
 
 export function post() {
-    return trade.trade_summary(state)
+    return trade.summary(state)
 }
