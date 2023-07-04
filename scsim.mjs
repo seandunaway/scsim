@@ -4,8 +4,8 @@ import {readdirSync} from 'node:fs'
 import {pipeline} from 'node:stream'
 
 let handler_regex = new RegExp(process.argv[2])
-let timestamp_start = new Date(process.argv[3] ?? '1900').getTime()
-let timestamp_stop = new Date(process.argv[4] ?? '2100').getTime()
+let timestamp_start = new Date(process.argv[3] || '1900').getTime()
+let timestamp_stop = new Date(process.argv[4] || '2100').getTime()
 
 let handlers = []
 let filenames = readdirSync('./include/')
