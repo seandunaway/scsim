@@ -32,6 +32,11 @@ export function summary(state) {
 
     summary.breakeven = percent(1 - (summary.up_target / (summary.up_target + summary.down_target)))
     summary.percent = percent(summary.up / summary.resolved)
+    if (state.short) {
+        summary.breakeven = 1 - summary.breakeven
+        summary.percent = 1 - summary.percent
+    }
+
     summary.edge = percent(summary.percent - summary.breakeven)
 
     delete summary.trades
