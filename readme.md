@@ -21,9 +21,6 @@ export function pre() {
 export function tick(object) {
 }
 
-export function debug(object) {
-}
-
 export function post() {
 }
 ```

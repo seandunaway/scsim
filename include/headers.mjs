@@ -15,12 +15,3 @@ let headers = {
 export function pre() {
     return headers
 }
-
-export function tick() {
-}
-
-export function debug() {
-}
-
-export function post() {
-}
