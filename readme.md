@@ -76,36 +76,60 @@ range {
   diff_days: 4547.603472222222
 }
 trade 1r, 100p targets {
-  up: 2885,
-  down: 2247,
-  resolved: 5132,
+  up: 2881,
+  down: 2244,
+  resolved: 5125,
   unresolved: 17,
-  total_trades: 5149,
-  percent: 0.5621590023382697
+  total_trades: 5142,
+  percent: 0.5621463414634147
 }
-trade 1r, 100p targets, 2020-2023 only {
-  up: 1800,
-  down: 1627,
-  resolved: 3427,
+trade 1r, 100p targets, 2017-2018 {
+  up: 1460,
+  down: 1172,
+  resolved: 2632,
   unresolved: 0,
-  total_trades: 3427,
-  percent: 0.5252407353370294
+  total_trades: 2632,
+  percent: 0.5547112462006079
 }
-trade 1r, 100p targets, 2020 only {
-  up: 56150,
-  down: 31023,
+trade 1r, 100p targets, 2017 {
+  up: 456,
+  down: 0,
+  resolved: 456,
+  unresolved: 0,
+  total_trades: 456,
+  percent: 1
+}
+trade 1r, 100p targets, 2018 {
+  up: 1027,
+  down: 1172,
+  resolved: 2199,
+  unresolved: 0,
+  total_trades: 2199,
+  percent: 0.4670304683947249
+}
+trade 1r, 100p targets, 2020-2023 {
+  up: 1796,
+  down: 1625,
+  resolved: 3421,
+  unresolved: 0,
+  total_trades: 3421,
+  percent: 0.5249926921952646
+}
+trade 1r, 100p targets, 2020, dupes {
+  up: 56242,
+  down: 30931,
   resolved: 87173,
   unresolved: 0,
   total_trades: 87173,
-  percent: 0.6441214596262604
+  percent: 0.6451768322760488
 }
 trade 1r, 200p targets {
-  up: 1675,
+  up: 1674,
   down: 1061,
-  resolved: 2736,
+  resolved: 2735,
   unresolved: 35,
-  total_trades: 2771,
-  percent: 0.6122076023391813
+  total_trades: 2770,
+  percent: 0.6120658135283363
 }
 trade 1r, 400p targets {
   up: 1050,
@@ -116,12 +140,12 @@ trade 1r, 400p targets {
   percent: 0.6939854593522803
 }
 trade 1r, 50p targets {
-  up: 4702,
+  up: 4700,
   down: 4128,
-  resolved: 8830,
+  resolved: 8828,
   unresolved: 8,
-  total_trades: 8838,
-  percent: 0.5325028312570781
+  total_trades: 8836,
+  percent: 0.5323969188944269
 }
 trade 1r, 5p targets {
   up: 19369,
@@ -131,7 +155,7 @@ trade 1r, 5p targets {
   total_trades: 37876,
   percent: 0.5113792375118809
 }
-time 61736
+time 17578
 %
 ```
 

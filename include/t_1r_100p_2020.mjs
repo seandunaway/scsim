@@ -1,7 +1,7 @@
 import * as trade from '../trade.mjs'
 
 export let enabled = true
-export let name = 'trade 1r, 100p targets, 2020 only, duplicates'
+export let name = 'trade 1r, 100p targets, 2020, dupes'
 
 let state = trade.new_state()
 
