@@ -12,25 +12,21 @@ export function new_state(overrides) {
 
 export function trade_targets(state, object, up_target = 5, down_target = 5) {
     for (let i = 0; i < state.trades.length; i++) {
-        if (state.trades[i] === undefined) continue
-
         if (state.trades[i] + up_target <= object.c) {
             state.up++
-            state.trades[i] = undefined
+            state.resolved++
+            state.trades.splice(i, 1)
         }
         else if (state.trades[i] - down_target >= object.c) {
             state.down++
-            state.trades[i] = undefined
+            state.resolved++
+            state.trades.splice(i, 1)
         }
     }
 }
 
 export function trade_summary(state) {
-    for (let trade of state.trades) {
-        if (trade === undefined) state.resolved++
-        else state.unresolved++
-    }
-
+    state.unresolved = state.trades.length
     state.total_trades = state.resolved + state.unresolved
     state.percent = state.up / state.resolved
 
