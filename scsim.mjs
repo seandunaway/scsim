@@ -47,7 +47,6 @@ async function *hijack(source) {
 
             handle('tick', object)
         }
-        if (process.env.DEBUG && lines_processed >= 1000) break
     }
 
     handle('post')
