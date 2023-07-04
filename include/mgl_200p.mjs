@@ -1,7 +1,7 @@
 import * as trade from '../trade.mjs'
 
 export let enabled = true
-export let name = 'trade 1r, martingale long 200p limit 5'
+export let name = 'martingale long, 1r 200p lmt 5'
 
 let state = trade.new_state()
 
