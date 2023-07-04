@@ -8,7 +8,7 @@ let timestamp_start = new Date(process.argv[3] || '1900').getTime()
 let timestamp_stop = new Date(process.argv[4] || '2100').getTime()
 
 let handlers = []
-let filenames = readdirSync('./include/')
+let filenames = readdirSync('./include/', {encoding: 'utf8', recursive: true})
 let filenames_sort = filenames.sort(function (a, b) {
     return a.localeCompare(b, undefined, {numeric: true})
 })
