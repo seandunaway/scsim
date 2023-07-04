@@ -31,7 +31,7 @@ function return values are written to stdout
 
 
 ## results
-```shell
+```js
 % ./scsim.mjs < ES.1m.jsonl
 headers {
   t: 'timestamp',
