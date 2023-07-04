@@ -27,7 +27,7 @@ export function trade_summary(state) {
     state.total_trades = state.resolved + state.unresolved
     state.percent = state.up / state.resolved
 
-    let trade_summary = {... state}
+    let trade_summary = {...state}
     delete trade_summary.trades
     return trade_summary
 }
