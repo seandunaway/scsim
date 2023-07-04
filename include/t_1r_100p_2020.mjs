@@ -14,7 +14,7 @@ export function tick(object) {
     // enter
     if (object.t < new Date('2020').getTime() || object.t > new Date('2021').getTime()) return
     if (object.c % 1 !== 0) return  // every 1p
-
+    if (state.trades.includes(object.c)) return   // no duplicates
     state.trades.push(object.c)
 }
 
