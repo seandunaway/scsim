@@ -5,10 +5,12 @@ import {pipeline} from 'node:stream'
 
 let handlers = []
 let filenames = readdirSync('./include/')
+let handler_regex = new RegExp(process.argv[2])
 for (let filename of filenames) {
     if (! filename.endsWith('.mjs')) continue
     let module = await import(`./include/${filename}`)
     if (! module.enabled) continue
+    if (! handler_regex.test(filename)) continue
     handlers.push(module)
 }
 
