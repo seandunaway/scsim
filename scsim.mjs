@@ -57,7 +57,10 @@ async function *hijack(source) {
 
 function handle(hook, ...params) {
     for (let handler of handlers) {
+        if (typeof handler[hook] !== 'function') return
+
         let result = handler[hook](...params)
+
         if (result !== undefined)
             console.log(`\x1b[7m${handler.name}\x1b[0m`, result)
     }
