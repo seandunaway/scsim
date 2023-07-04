@@ -16,6 +16,7 @@ for (let filename of filenames_sort) {
     if (! handler_regex.test(filename)) continue
     handlers.push(module)
 }
+if (! handlers.length) process.exit()
 
 process.stdin.setEncoding('ascii')
 process.stdout.setDefaultEncoding('ascii')
