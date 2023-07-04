@@ -3,10 +3,13 @@ import * as trade from '../trade.mjs'
 export let enabled = true
 export let name = 'trade 1r, 100p targets, 2017-2018'
 
-let state = trade.state()
+let state = trade.state({
+    up_target: 100,
+    down_target: 100,
+})
 
 export function tick(object) {
-    trade.targets(state, object, 100, 100)
+    trade.targets(state, object)
 
     // enter
     if (object.t < new Date('2017').getTime() || object.t > new Date('2019').getTime()) return
