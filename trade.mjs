@@ -26,7 +26,11 @@ export function summary(state) {
     summary.resolved = summary.up + summary.down
     summary.unresolved = summary.trades.length
     summary.total_trades = summary.resolved + summary.unresolved
-    summary.percent = summary.up / summary.resolved
+    summary.percent = percent(summary.up / summary.resolved)
     delete summary.trades
     return summary
+}
+
+export function percent(float) {
+    return Math.round((float + Number.EPSILON) * 10000) / 100
 }
