@@ -1,7 +1,7 @@
 import * as trade from '../trade.mjs'
 
 export let enabled = true
-export let name = 'extremes'
+export let name = 'buy on 2% red day'
 
 let state = trade.state()
 
