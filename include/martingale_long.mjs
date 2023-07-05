@@ -1,26 +1,27 @@
 import * as trade from '../trade.mjs'
 
 export let enabled = true
-export let name = 'martingale long, reward 5, risk 5x5'
+export let name = 'martingale long'
 
 let state = trade.state({
-    up_target: 5,
-    down_target: 25,
-    martingale: 5,
+    up_target: 20,
+    down_target: 100,
 })
+state.martingale = state.up_target
 
 let in_a_trade = false
 
-export function tick(object) {
-    if (in_a_trade) {
-        manage(object)
-    }
-    else {
-        enter(object)
-    }
+export function enter(object) {
+    if (in_a_trade) return
+    if (object.c % 1 !== 0) return
+
+    state.trades.push(object.c)
+    in_a_trade = true
 }
 
-function manage(object) {
+export function exit(object) {
+    if (! in_a_trade) return
+
     // if price is up_target points above my first entry.. success!
     if (object.c >= state.trades[0] + state.up_target) {
         state.up += state.trades.length
@@ -43,16 +44,6 @@ function manage(object) {
         state.trades.push(martingale_price)
         return
     }
-}
-
-function enter(object) {
-    if (object.t < new Date('2020').getTime() || object.t > new Date('2023').getTime()) return
-    if (object.c % 1 !== 0) return
-
-    if (in_a_trade) return
-
-    state.trades.push(object.c)
-    in_a_trade = true
 }
 
 export function post() {

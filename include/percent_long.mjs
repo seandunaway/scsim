@@ -1,7 +1,7 @@
 import * as trade from '../trade.mjs'
 
 export let enabled = true
-export let name = 'long on 2% red day'
+export let name = '-2% long'
 
 let state = trade.state()
 
@@ -30,6 +30,8 @@ export function enter(object) {
 }
 
 export function exit(object) {
+    if (! in_a_trade) return
+
     if (object.c <= state.trades[0] - state.down_target) {
         state.down++
         state.trades = []
