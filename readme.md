@@ -20,15 +20,11 @@
 ```js
 export let enabled = true
 export let name = 'name'
-
-export function pre() {
-}
-
-export function tick(object) {
-}
-
-export function post() {
-}
+export function pre() {}
+export function tick(object) {}
+export function enter(object) {}
+export function exit(object) {}
+export function post() {}
 ```
 function return values are written to stdout
 
