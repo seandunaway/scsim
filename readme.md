@@ -397,9 +397,3 @@ trade 1r, 400p targets {
 }
 %
 ```
-
-
-## todo
-- boolean functions for filter, enter, exit
-- multiprocessor
-- add strategies
