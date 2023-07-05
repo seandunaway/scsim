@@ -3,7 +3,7 @@
 > iterate over historical data and pass each tick to handlers
 
 
-**usage**: `./scsim.mjs <regex> <start_date> <stop_date> <up_target> <down_target> < ES.test.jsonl`
+**usage**: `./scsim.mjs <regex> <start_date> <stop_date> <up_target> <down_target> < ES.1m.jsonl`
 
 **regex**: handler match e.g. `'(count|martingale)'`, omit for all
 
