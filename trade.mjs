@@ -1,13 +1,21 @@
+import process from 'node:process'
+
 export function state(overrides) {
     let state = {
         trades: [],
         up: 0,
         down: 0,
 
-        up_target: Number(process.argv[5]) || 10,
-        down_target: Number(process.argv[6]) || 10,
+        up_target: 20,
+        down_target: 20,
+
         ...overrides,
     }
+
+    // override the overrides
+    if (process.argv[5]) state.up_target = Number(process.argv[5])
+    if (process.argv[6]) state.down_target = Number(process.argv[6])
+
     return state
 }
 
