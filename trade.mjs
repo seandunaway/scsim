@@ -5,10 +5,8 @@ export function state(overrides) {
         trades: [],
         up: 0,
         down: 0,
-
         up_target: 20,
         down_target: 20,
-
         ...overrides,
     }
 
@@ -17,19 +15,6 @@ export function state(overrides) {
     if (process.argv[6]) state.down_target = Number(process.argv[6])
 
     return state
-}
-
-export function targets(state, object) {
-    for (let i = 0; i < state.trades.length; i++) {
-        if (state.trades[i] + state.up_target <= object.c) {
-            state.up++
-            state.trades.splice(i, 1)
-        }
-        if (state.trades[i] - state.down_target >= object.c) {
-            state.down++
-            state.trades.splice(i, 1)
-        }
-    }
 }
 
 export function summary(state) {
