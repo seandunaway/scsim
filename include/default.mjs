@@ -6,7 +6,6 @@ export let name = 'default'
 let state = trade.state()
 
 export function enter(object) {
-    if (object.c % 5 !== 0) return // every 5p
     if (state.trades.includes(object.c)) return // no duplicates
     state.trades.push(object.c)
 }
